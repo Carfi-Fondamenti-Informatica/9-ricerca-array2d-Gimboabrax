@@ -6,4 +6,4 @@
 #define ESERCITAZIONE_9_LIB_H
 
 #endif //ESERCITAZIONE_9_LIB_H
-bool find(char **, char *, int & i);
+bool find(char [10][20], char [20], int & i);
