@@ -13,16 +13,17 @@ bool find(char list1[10][20], char list2[20], int & ris){
         for(int j=0; j<20; j++){
             listtemp[j]=list1[i][j];
             temp=j;
-            if((64<listtemp[j]) and (listtemp[j]<91) and (listtemp[j]!=list2[j]+' ') and (listtemp[j]!=list2[j])){
-                Flag=true;
-            } else if((96<listtemp[j]) and (listtemp[j]<123) and (listtemp[j]!=list2[j]-' ') and (listtemp[j]!=list2[j])){
-                Flag=true;
-            } else if(listtemp[j]!=list2[j]){
-                Flag=true;
-            }else{
+            if(listtemp[j]==list2[j]){
                 Flag=false;
+            } else{
+                if (((64 < listtemp[j]) and (listtemp[j] < 91)) and (list2[j] != listtemp[j] + 32)) {
+                    Flag = true;
+                } else if (((96 < listtemp[j]) and (listtemp[j] < 123)) and (listtemp[j] != list2[j] - 32)) {
+                    Flag = true;
+                } else {
+                    Flag = false;
+                }
             }
-
             if(Flag){
                 flag=false;
                 break;
