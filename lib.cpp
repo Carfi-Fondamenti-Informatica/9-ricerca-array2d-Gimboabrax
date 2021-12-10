@@ -7,23 +7,28 @@ using namespace std;
 
 bool find(char list1[10][20], char list2[20], int & ris){
     char listtemp[20];
-    bool flag=false, Flag=false;
+    bool flag=false, Flag;
     int temp=0;
+
+    //Cicli for annidati x scorrere elementi di list1 e list22
     for(int i=0; i<10; i++){
         for(int j=0; j<20; j++){
             listtemp[j]=list1[i][j];
             temp=j;
-            if(listtemp[j]==list2[j]){
-                Flag=false;
-            } else{
-                if (((64 < listtemp[j]) and (listtemp[j] < 91)) and (list2[j] != listtemp[j] + 32)) {
-                    Flag = true;
-                } else if (((96 < listtemp[j]) and (listtemp[j] < 123)) and (listtemp[j] != list2[j] - 32)) {
-                    Flag = true;
-                } else {
+
+            //Condizioni per Flag, se Flag=false elementi= o elemento=elemento+-32
+            if(listtemp[j]!=list2[j]){
+                if (((64 < listtemp[j]) and (listtemp[j] < 91)) and (list2[j] == listtemp[j] + 32)) {
                     Flag = false;
+                } else if (((96 < listtemp[j]) and (listtemp[j] < 123)) and (listtemp[j] == list2[j] - 32)) {
+                    Flag = false;
+                } else {
+                    Flag = true;
                 }
+            } else{
+                Flag=false;
             }
+
             if(Flag){
                 flag=false;
                 break;
@@ -36,11 +41,12 @@ bool find(char list1[10][20], char list2[20], int & ris){
             return flag;
         }
     }
+
     return false;
 }
 
 //PROVVISORIO stampa mat
-/*void stampa(char list1[10][20], char list2[20]) {
+void stampa(char list1[10][20], char list2[20]) {
     cout << "list1:" << endl;
     cout << "   0  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18 19" << endl;
     for (int i = 0; i < 10; i++) {
@@ -56,4 +62,4 @@ bool find(char list1[10][20], char list2[20], int & ris){
         cout  << list2[i] << "  ";
     }
     cout << endl;
-}*/
+}

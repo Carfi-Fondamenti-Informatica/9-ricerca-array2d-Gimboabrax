@@ -24,11 +24,11 @@ using namespace std;
             for (int k = 0; k < 20; k++) {
                 if (k == 0) {
                     cin >> list1[j][0];
-                } else if (list1[j][k - 1] != '0') {
+                } else if (list1[j][k - 1] != '!') {
                     cin >> list1[j][k];
                 } else {
-                    list1[j][k] = '0';
-                    list1[j][k-1]= '0';
+                    list1[j][k] = '!';
+                    list1[j][k-1]= '!';
                 }
             }
         }
@@ -37,10 +37,10 @@ using namespace std;
         for (int k = 0; k < 20; k++) {
             if (k == 0) {
                 cin >> list2[0];
-            } else if (list2[k - 1] != '0') {
+            } else if (list2[k - 1] != '!') {
                 cin >> list2[k];
             } else {
-                list2[k] = '0';
+                list2[k] = '!';
             }
         }
 
