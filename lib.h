@@ -11,7 +11,25 @@ bool find(char [10][20], char [20], int & i);
 void stampa(char[10][20], char [20]);
 /*
 A
-!
+ a
+ a
+ a
+ a
+ a
+ a
+ a
+ a
+ a
+ a
+ a
+ a
+ a
+ a
+ a
+ a
+ a
+ a
+ a
 A
 l
 !
@@ -32,6 +50,25 @@ i
 j
 !
 a
-l
-!
+a
+ a
+ a
+ a
+ a
+ a
+ a
+ a
+ a
+ a
+ a
+ a
+ a
+ a
+ a
+ a
+ a
+ a
+ a
+
+
   */

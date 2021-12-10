@@ -9,7 +9,6 @@ bool find(char list1[10][20], char list2[20], int & ris){
     char listtemp[20];
     bool flag=false, Flag;
     int temp=0;
-
     //Cicli for annidati x scorrere elementi di list1 e list22
     for(int i=0; i<10; i++){
         for(int j=0; j<20; j++){
@@ -18,7 +17,9 @@ bool find(char list1[10][20], char list2[20], int & ris){
 
             //Condizioni per Flag, se Flag=false elementi= o elemento=elemento+-32
             if(listtemp[j]!=list2[j]){
-                if (((64 < listtemp[j]) and (listtemp[j] < 91)) and (list2[j] == listtemp[j] + 32)) {
+                if(listtemp[j]==33){
+                    Flag = true;
+                } else if (((64 < listtemp[j]) and (listtemp[j] < 91)) and (list2[j] == listtemp[j] + 32)) {
                     Flag = false;
                 } else if (((96 < listtemp[j]) and (listtemp[j] < 123)) and (listtemp[j] == list2[j] - 32)) {
                     Flag = false;
