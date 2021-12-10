@@ -11,6 +11,7 @@ bool find(char [10][20], char [20], int & i);
 void stampa(char[10][20], char [20]);
 /*
 a
+l
 0
 b
 0
@@ -30,6 +31,7 @@ i
 0
 j
 0
-j
+a
+l
 0
   */

@@ -7,13 +7,23 @@ using namespace std;
 
 bool find(char list1[10][20], char list2[20], int & ris){
     char listtemp[20];
-    bool flag=false;
+    bool flag=false, Flag=false;
     int temp=0;
     for(int i=0; i<10; i++){
         for(int j=0; j<20; j++){
             listtemp[j]=list1[i][j];
             temp=j;
-            if(listtemp[j]!=list2[j]){
+            if((64<listtemp[j]) and (listtemp[j]<91) and (listtemp[j]!=list2[j]+' ') and (listtemp[j]!=list2[j])){
+                Flag=true;
+            } else if((96<listtemp[j]) and (listtemp[j]<123) and (listtemp[j]!=list2[j]-' ') and (listtemp[j]!=list2[j])){
+                Flag=true;
+            } else if(listtemp[j]!=list2[j]){
+                Flag=true;
+            }else{
+                Flag=false;
+            }
+
+            if(Flag){
                 flag=false;
                 break;
             } else{

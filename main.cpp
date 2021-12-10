@@ -21,8 +21,8 @@ using namespace std;
 
         //Riempio list1
         for (int j = 0; j < 10; j++) {
-            for (int k = 1; k < 20; k++) {
-                if (k == 1) {
+            for (int k = 0; k < 20; k++) {
+                if (k == 0) {
                     cin >> list1[j][0];
                 } else if (list1[j][k - 1] != '0') {
                     cin >> list1[j][k];
@@ -34,8 +34,8 @@ using namespace std;
         }
 
         //Riempio list2
-        for (int k = 1; k < 20; k++) {
-            if (k == 1) {
+        for (int k = 0; k < 20; k++) {
+            if (k == 0) {
                 cin >> list2[0];
             } else if (list2[k - 1] != '0') {
                 cin >> list2[k];
