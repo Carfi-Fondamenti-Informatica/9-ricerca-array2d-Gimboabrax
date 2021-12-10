@@ -8,7 +8,7 @@
 #endif //ESERCITAZIONE_9_LIB_H
 bool find(char [10][20], char [20], int & i);
 //PROVVISORIO stampa mat
-void stampa(char[10][20], char [20]);
+//void stampa(char[10][20], char [20]);
 /*
 a
 l

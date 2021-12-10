@@ -45,7 +45,7 @@ using namespace std;
         }
 
         //PROVVISORIO
-        stampa(list1, list2);
+        //stampa(list1, list2);
 
         //Chiamo find() e stampo
         if (find(list1, list2, ris)) {

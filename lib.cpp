@@ -39,7 +39,7 @@ bool find(char list1[10][20], char list2[20], int & ris){
 }
 
 //PROVVISORIO stampa mat
-void stampa(char list1[10][20], char list2[20]) {
+/*void stampa(char list1[10][20], char list2[20]) {
     cout << "list1:" << endl;
     cout << "   0  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18 19" << endl;
     for (int i = 0; i < 10; i++) {
@@ -55,4 +55,4 @@ void stampa(char list1[10][20], char list2[20]) {
         cout  << list2[i] << "  ";
     }
     cout << endl;
-}
+}*/
